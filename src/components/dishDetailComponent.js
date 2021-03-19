@@ -3,10 +3,7 @@ import {Card, CardImg, CardText, CardBody, CardTitle, Row} from 'reactstrap';
 
 class DishDetail extends Component{
 
-    constructor(props){
-        super(props);
-    }
-
+    
     renderDish=(dish)=>{
         if(dish != null){
             return(
@@ -33,7 +30,10 @@ class DishDetail extends Component{
                     <h4>Comments</h4>
                     {dish.comments.map(c=>
                         <Row key={c.id}>
-                            <Row>{c.comment}</Row>
+                            <div className="col">
+                                <p>{c.comment}</p>
+                                <p>--{c.author}</p>
+                            </div>
                         </Row>)}
                 </Card>
             );
