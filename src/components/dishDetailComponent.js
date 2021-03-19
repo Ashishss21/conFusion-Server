@@ -32,7 +32,7 @@ class DishDetail extends Component{
                         <Row key={c.id}>
                             <div className="col">
                                 <p>{c.comment}</p>
-                                <p>--{c.author}</p>
+                                <p>--{c.author}, {c.date}</p>
                             </div>
                         </Row>)}
                 </Card>
@@ -47,13 +47,15 @@ class DishDetail extends Component{
     
     render(){
         return(
-            <div className="row">
-                <div className="col-md-12">
-                    {this.renderDish(this.props.selectedDish)}
-                </div>
-                <div className="col-md-12">
-                    {this.renderComments(this.props.selectedDish)} 
-                </div>
+            <div className="container">
+                <Row>
+                    <div className="col-5 col-md-12 m-1">
+                        {this.renderDish(this.props.selectedDish)}
+                    </div>
+                    <div className="col-5 col-md-12 m-1">
+                        {this.renderComments(this.props.selectedDish)}
+                    </div>
+                </Row>
             </div>
         );
     }
