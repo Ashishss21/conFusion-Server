@@ -18,7 +18,7 @@ class DishDetail extends Component{
         }
         else{
             return(
-                <div></div>
+                <div>Nothing Found</div>
             );
         }
     }
@@ -40,7 +40,7 @@ class DishDetail extends Component{
         }
         else{
             return(
-                <div></div>
+                <div>Nothing Found</div>
             );
         }
     }
@@ -49,10 +49,10 @@ class DishDetail extends Component{
         return(
             <div className="container">
                 <Row>
-                    <div className="col-5 col-md-12 m-1">
+                    <div className="col-5 col-md-12 m-1 col-sm">
                         {this.renderDish(this.props.selectedDish)}
                     </div>
-                    <div className="col-5 col-md-12 m-1">
+                    <div className="col-xs-5 col-md-12 m-1 col-sm">
                         {this.renderComments(this.props.selectedDish)}
                     </div>
                 </Row>
