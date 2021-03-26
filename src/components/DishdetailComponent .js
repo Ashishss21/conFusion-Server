@@ -19,7 +19,7 @@ class DishDetail extends Component{
         }
         else{
             return(
-                <div>Nothing Found</div>
+                <div></div>
             );
         }
     }
@@ -42,7 +42,7 @@ class DishDetail extends Component{
                 </div>
             );
         }
-        else return <div>Nothing Found</div>
+        else return <div></div>
     }
 
     render() {
