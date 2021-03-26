@@ -25,13 +25,13 @@ class DishDetail extends Component{
     }
 
 
-    renderComments(props) {
-        if (props != null) {
+    renderComments(dish) {
+        if (dish != null) {
             return (
                 <div className="container">
-                 <Card key={props.comments.id}>
+                 <Card key={dish.comments.id}>
                     <h4>Comments</h4>
-                    {props.comments.map(c=>
+                    {dish.comments.map(c=>
                         <div key={c.id}>
                             <div className="col">
                                 <CardText>{c.comment}</CardText>
@@ -47,21 +47,23 @@ class DishDetail extends Component{
 
     render() {
 
-        console.log(this.props);
+        /*console.log(this.props);
 
         console.log(this.props);
 
-        /*console.log(dish);*/
+        console.log(dish);
+        
+        console.log(this.props.dish);*/
 
         return(
             <div className="container">
                 <div className="row">
-                    <div className="col-6 col-xs-12">
-                        {/* {this.renderDish(this.props.selectedDish)} */}
-                        <this.renderDish props={this.props.dish}/>
+                    <div className="col-5 col-xs-10">
+                        {this.renderDish(this.props.dish)}
+                        {/* <this.renderDish props={this.props.dish}/> */}
                         </div>
-                    <div className="col-6 col-xs-12">
-                        {this.renderComments(this.props.selectedDish)}
+                    <div className="col-5 col-xs-10">
+                        {this.renderComments(this.props.dish)}
                     </div>
                 </div>
             </div>
